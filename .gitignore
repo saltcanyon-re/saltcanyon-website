@@ -1,0 +1,7 @@
+# Large original photos and old WordPress downloads stay local, not in the repo
+brand/
+assets/
+# Netlify CLI link and local junk
+.netlify/
+.DS_Store
+.claude/settings.local.json

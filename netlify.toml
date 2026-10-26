@@ -1,0 +1,4 @@
+# Netlify publishes only the site/ folder. Every push to main deploys to saltcanyon.com.
+[build]
+  publish = "site"
+  command = ""

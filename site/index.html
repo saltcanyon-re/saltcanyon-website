@@ -1,0 +1,740 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SaltCanyon Real Estate</title>
+<meta name="description" content="SaltCanyon is a Draper, Utah commercial real estate firm offering brokerage, property management, and investment services for industrial and flex properties across Utah.">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="img/favicon-512.png">
+<link rel="apple-touch-icon" href="img/favicon-180.png">
+<meta property="og:title" content="SaltCanyon Real Estate">
+<meta property="og:description" content="Industrial and flex commercial real estate across Utah. Brokerage, property management, and investments.">
+<meta property="og:image" content="img/hero-74-building.jpg">
+<meta name="theme-color" content="#0b0b0c">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"RealEstateAgent","name":"SaltCanyon Real Estate","url":"https://www.saltcanyon.com","telephone":"+1-801-210-0170","email":"management@saltcanyon.com","address":{"@type":"PostalAddress","streetAddress":"74 E 13065 S Unit 7","addressLocality":"Draper","addressRegion":"UT","postalCode":"84020","addressCountry":"US"},"areaServed":"Utah"}
+</script>
+<style>
+/* Layout: monochrome boutique firm. Black and cool off-white, square edges, hairline rules,
+   oversized tight sans headlines, mono micro-labels. Full-color photography carries all the color.
+   Single theme by design. */
+:root {
+  --black: #0b0b0c;       /* dark ground: hero, bands, footer */
+  --char: #151618;        /* raised surface on dark */
+  --rule-dark: #2a2c2f;   /* hairlines on dark */
+  --white: #f5f5f3;       /* light ground */
+  --grey: #e9e9e6;        /* alternate light ground */
+  --card: #ffffff;        /* cards on light */
+  --ink: #0b0b0c;         /* text on light */
+  --mute: #55585c;        /* secondary text on light */
+  --mute-dark: #a3a6aa;   /* secondary text on dark */
+  --rule: #d4d4d0;        /* hairlines on light */
+  --f-sans: "Geist", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --f-mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --t-hero: clamp(3rem, 1.4rem + 6.6vw, 7.5rem);
+  --t-h2: clamp(2.125rem, 1.3rem + 3.2vw, 4.25rem);
+  --t-h3: clamp(1.25rem, 1.1rem + 0.6vw, 1.625rem);
+  --t-lead: clamp(1.125rem, 1.05rem + 0.35vw, 1.3125rem);
+  --gutter: clamp(16px, 4vw, 48px);
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 72px; background: var(--black); }
+body { margin: 0; background: var(--white); color: var(--ink); font: 400 17px/1.6 var(--f-sans); -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+img { max-width: 100%; display: block; }
+a { color: inherit; transition: color .2s var(--ease), background-color .2s var(--ease), border-color .2s var(--ease), opacity .2s var(--ease); }
+h1, h2, h3 { font-family: var(--f-sans); font-weight: 600; letter-spacing: -0.035em; line-height: 1; margin: 0; text-wrap: balance; }
+h2 { font-size: var(--t-h2); }
+h3 { font-size: var(--t-h3); letter-spacing: -0.02em; line-height: 1.15; }
+p { margin: 0; text-wrap: pretty; }
+::selection { background: var(--ink); color: var(--white); }
+:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+
+.wrap { max-width: 1320px; margin: 0 auto; padding-inline: var(--gutter); }
+section { padding-block: clamp(88px, 10vw, 160px); }
+.light { background: var(--white); }
+.grey { background: var(--grey); }
+.dark { background: var(--black); color: var(--white); }
+
+.label { display: inline-flex; align-items: center; gap: 12px; font: 500 14px/1.4 var(--f-mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--mute); }
+.label::before { content: ""; width: 7px; height: 7px; background: currentColor; flex-shrink: 0; }
+.dark .label { color: var(--mute-dark); }
+.lead { font-size: var(--t-lead); line-height: 1.5; color: var(--mute); max-width: 56ch; }
+.dark .lead { color: var(--mute-dark); }
+.section-top { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 24px clamp(24px, 4vw, 64px); align-items: end; padding-bottom: clamp(40px, 5vw, 72px); }
+.section-top > .label, .section-top > .div-tag { grid-column: 1 / -1; }
+.section-top h2 { grid-column: span 7; }
+.section-top .lead { grid-column: span 5; }
+@media (max-width: 900px) { .section-top h2, .section-top .lead { grid-column: 1 / -1; } }
+
+/* Buttons */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 12px; min-height: 52px; padding: 14px 24px; font: 500 15px/1 var(--f-sans); letter-spacing: -0.005em; text-decoration: none; border: 1px solid transparent; border-radius: 0; cursor: pointer; }
+.btn svg { width: 16px; height: 16px; transition: transform .25s var(--ease); }
+.btn:hover svg { transform: translateX(3px); }
+.btn-dark { background: var(--ink); color: var(--white); }
+.btn-dark:hover { background: #2a2c2f; }
+.btn-white { background: var(--white); color: var(--ink); }
+.btn-white:hover { background: #ffffff; }
+.btn-line { border-color: rgba(245,245,243,.35); color: var(--white); }
+.btn-line:hover { border-color: var(--white); }
+.tlink { display: inline-flex; align-items: center; gap: 8px; font: 500 15px/1.4 var(--f-sans); text-decoration: none; border-bottom: 1px solid currentColor; padding-bottom: 2px; }
+.tlink svg { width: 14px; height: 14px; transition: transform .25s var(--ease); }
+.tlink:hover svg { transform: translateX(3px); }
+
+/* Header: always dark, hairline once scrolled */
+.site-header { position: fixed; top: 0; left: 0; right: 0; z-index: 50; padding-top: env(safe-area-inset-top, 0px); background: rgba(11,11,12,.82); backdrop-filter: saturate(140%) blur(14px); -webkit-backdrop-filter: saturate(140%) blur(14px); color: var(--white); border-bottom: 1px solid transparent; transition: border-color .2s var(--ease); }
+.site-header.scrolled { border-color: var(--rule-dark); }
+.site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 72px; }
+.brand img { height: 26px; width: auto; }
+.nav { display: flex; align-items: center; gap: 32px; }
+.nav a { font-size: 14px; text-decoration: none; color: var(--mute-dark); white-space: nowrap; }
+.nav a:hover { color: var(--white); }
+.nav .btn { color: var(--ink); min-height: 40px; padding: 10px 18px; font-size: 14px; }
+.nav .btn:hover { color: var(--ink); }
+.menu-btn { display: none; background: none; border: 1px solid var(--rule-dark); color: var(--white); padding: 10px 14px; font: 500 13px var(--f-mono); letter-spacing: .08em; text-transform: uppercase; cursor: pointer; }
+@media (max-width: 1000px) {
+  .menu-btn { display: inline-block; }
+  .nav { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; background: var(--black); padding: 8px var(--gutter) 28px; border-bottom: 1px solid var(--rule-dark); }
+  .nav.open { display: flex; }
+  .nav a { padding-block: 18px; font-size: 20px; color: var(--white); border-bottom: 1px solid var(--rule-dark); }
+  .nav .btn { margin-top: 20px; min-height: 52px; font-size: 15px; border-bottom: 0; }
+}
+
+/* Hero */
+.hero { padding-block: calc(72px + clamp(64px, 9vw, 140px)) 0; }
+.hero-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 32px clamp(24px, 4vw, 64px); align-items: end; }
+.hero-grid > .label { grid-column: 1 / -1; }
+.hero h1 { grid-column: span 8; font-size: var(--t-hero); letter-spacing: -0.045em; line-height: .95; }
+.hero-side { grid-column: span 4; display: grid; gap: 28px; padding-bottom: 10px; }
+.hero-ctas { display: flex; flex-wrap: wrap; gap: 10px; }
+@media (max-width: 960px) { .hero h1, .hero-side { grid-column: 1 / -1; } }
+.hero-image { position: relative; margin-top: clamp(56px, 7vw, 104px); height: clamp(320px, 52vw, 680px); overflow: hidden; }
+.hero-image .slide { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transform: scale(1.04); transition: opacity 1.4s var(--ease), transform 7s linear; }
+.hero-image .slide.active { opacity: 1; transform: scale(1); }
+.hero-image::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(11,11,12,.35) 0%, rgba(11,11,12,0) 30%, rgba(11,11,12,0) 70%, rgba(11,11,12,.55) 100%); }
+.hero-meta { position: absolute; left: 0; right: 0; bottom: 0; z-index: 1; }
+.hero-meta .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px 24px; padding-block: 20px; font: 400 12px/1.4 var(--f-mono); letter-spacing: .06em; text-transform: uppercase; color: rgba(245,245,243,.85); }
+.slide-nav { display: flex; align-items: center; gap: 14px; }
+.slide-dots { display: flex; gap: 6px; }
+.slide-dots button { position: relative; width: 44px; height: 24px; padding: 0; background: none; border: 0; cursor: pointer; }
+.slide-dots button::before { content: ""; position: absolute; left: 0; right: 0; top: 11px; height: 2px; background: rgba(245,245,243,.35); }
+.slide-dots button::after { content: ""; position: absolute; left: 0; top: 11px; height: 2px; width: 0; background: var(--white); }
+.slide-dots button.active::after { width: 100%; transition: width 6s linear; }
+.slide-dots button.done::after { width: 100%; }
+.slide-dots button:focus-visible { outline: 2px solid var(--white); outline-offset: 2px; }
+.slide-count { font-variant-numeric: tabular-nums; min-width: 56px; }
+
+/* Divisions */
+.divisions { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--ink); }
+.divisions li { display: grid; grid-row: span 4; grid-template-rows: subgrid; row-gap: 18px; align-content: start; padding: 32px 32px 8px 0; }
+.divisions h3 { align-self: end; }
+.divisions li + li { padding-left: 32px; border-left: 1px solid var(--rule); }
+.divisions h3 { font-size: clamp(2.25rem, 1.5rem + 2.4vw, 3.5rem); letter-spacing: -0.04em; line-height: .95; }
+.divisions .div-sub { font-size: clamp(1.125rem, 1.05rem + 0.3vw, 1.3125rem); font-weight: 500; letter-spacing: -0.015em; color: var(--ink); flex: 0; }
+.divisions p { color: var(--mute); flex: 1; }
+.divisions .label { flex: 0; }
+.divisions .tlink { align-self: flex-start; margin-top: 8px; }
+@media (max-width: 900px) {
+  .divisions { grid-template-columns: 1fr; }
+  .divisions li, .divisions li + li { padding: 32px 0; border-left: 0; border-top: 1px solid var(--rule); }
+  .divisions li:first-child { border-top: 0; }
+}
+
+/* Division chapters */
+.chapter { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: clamp(32px, 5vw, 80px); align-items: start; }
+.chapter-media { grid-column: span 5; position: sticky; top: 104px; overflow: hidden; }
+.chapter-media img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+.chapter-body { grid-column: span 7; display: grid; gap: 28px; min-width: 0; }
+.chapter-body > .label { justify-self: start; }
+.chapter.flip .chapter-media { order: 2; }
+.points { list-style: none; margin: 20px 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 32px; }
+.points li { border-top: 1px solid var(--rule); padding-block: 24px 28px; display: grid; gap: 10px; align-content: start; }
+.points h3 { font-size: 19px; letter-spacing: -0.015em; }
+.points p { color: var(--mute); font-size: 16px; }
+@media (max-width: 900px) {
+  .chapter-media, .chapter-body { grid-column: 1 / -1; }
+  .chapter-media { position: static; }
+  .chapter.flip .chapter-media { order: 0; }
+  .chapter-media img { aspect-ratio: 16 / 10; }
+}
+@media (max-width: 600px) { .points { grid-template-columns: 1fr; } }
+
+
+/* Division name tag: makes Investments / Property Management / Brokerage prominent in each section */
+.div-tag { display: flex; align-items: center; gap: 14px; margin: 0; font: 600 clamp(1.25rem, 1rem + 0.9vw, 1.75rem)/1 var(--f-sans); letter-spacing: -0.02em; color: var(--ink); }
+.div-tag::before { content: ""; width: 28px; height: 3px; background: currentColor; flex-shrink: 0; }
+.dark .div-tag { color: var(--white); }
+
+/* Location captions on photos (same style as the slideshow caption) */
+.media-cap { position: absolute; left: 0; right: 0; bottom: 0; z-index: 1; padding: 48px 20px 16px; background: linear-gradient(0deg, rgba(11,11,12,.72), rgba(11,11,12,0)); font: 500 13px/1.4 var(--f-mono); letter-spacing: .06em; text-transform: uppercase; color: #fff; }
+.chapter-media, .invest-media { position: relative; }
+.chapter-cta { margin-top: 8px; justify-self: start; }
+
+/* 1031 exchange callout */
+.callout { margin: 0 0 clamp(56px, 7vw, 96px); display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 24px 48px; align-items: center; padding: clamp(24px, 3vw, 40px); border: 1px solid var(--rule-dark); background: var(--char); }
+.callout h3 { font-size: clamp(1.5rem, 1.2rem + 1vw, 2.125rem); letter-spacing: -0.03em; }
+.callout p { color: var(--mute-dark); margin-top: 12px; max-width: 64ch; }
+.callout .fine { font: 400 12px/1.5 var(--f-mono); letter-spacing: .03em; margin-top: 14px; }
+@media (max-width: 860px) { .callout { grid-template-columns: 1fr; } .callout .btn { justify-self: start; } }
+
+/* Investments */
+.invest-media { margin-bottom: clamp(56px, 7vw, 96px); height: clamp(260px, 36vw, 480px); overflow: hidden; }
+.invest-media img { width: 100%; height: 100%; object-fit: cover; object-position: center 50%; }
+.steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); border-top: 1px solid var(--rule-dark); }
+.steps li { padding: 28px 24px 0 0; display: grid; gap: 12px; align-content: start; }
+.steps li + li { padding-left: 24px; border-left: 1px solid var(--rule-dark); }
+.steps .n { font: 500 12px/1 var(--f-mono); letter-spacing: .08em; color: var(--mute-dark); }
+.steps h3 { font-size: 21px; }
+.steps p { color: var(--mute-dark); font-size: 15px; }
+.invest-cta { margin-top: clamp(48px, 6vw, 80px); }
+@media (max-width: 1000px) {
+  .steps { grid-template-columns: 1fr; }
+  .steps li, .steps li + li { padding: 24px 0; border-left: 0; border-top: 1px solid var(--rule-dark); display: grid; grid-template-columns: 56px minmax(0, 1fr); gap: 6px 16px; }
+  .steps li:first-child { border-top: 0; }
+  .steps .n { grid-row: span 2; padding-top: 6px; }
+}
+
+/* Property types */
+.types { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(16px, 2vw, 24px); }
+.type { height: 100%; display: grid; grid-template-rows: auto 1fr; background: var(--card); }
+.type .img-wrap { position: relative; overflow: hidden; }
+.type img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; transition: transform .8s var(--ease), filter .5s var(--ease); }
+.type-desc { position: absolute; inset: 0; z-index: 1; display: flex; align-items: flex-end; margin: 0; padding: clamp(20px, 3vw, 36px); background: linear-gradient(0deg, rgba(11,11,12,.88) 0%, rgba(11,11,12,.55) 55%, rgba(11,11,12,.25) 100%); color: #fff; font-size: clamp(1.125rem, 1rem + 0.5vw, 1.375rem); font-weight: 500; line-height: 1.4; letter-spacing: -0.015em; opacity: 0; transform: translateY(10px); transition: opacity .35s var(--ease), transform .35s var(--ease); }
+.type:hover img, .type:focus-within img { filter: grayscale(1) contrast(1.05); transform: scale(1.03); }
+.type:hover .type-desc, .type:focus-within .type-desc { opacity: 1; transform: none; }
+.type:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+.type .hint { font: 400 12px/1.4 var(--f-mono); letter-spacing: .05em; text-transform: uppercase; color: var(--mute); }
+@media (hover: none) {
+  .type-desc { opacity: 1; transform: none; background: linear-gradient(0deg, rgba(11,11,12,.85) 0%, rgba(11,11,12,.15) 70%); font-size: 1rem; }
+  .type .hint { display: none; }
+}
+.type-body { padding: 28px 32px 32px; display: grid; gap: 12px; align-content: start; justify-items: start; }
+.type-body p { color: var(--mute); font-size: 16px; }
+@media (max-width: 760px) { .types { grid-template-columns: 1fr; } }
+
+/* Rooted in Utah: full-bleed image band */
+.utah { position: relative; padding: 0; background: var(--black); color: var(--white); overflow: hidden; }
+.utah img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 70% 55%; }
+.utah::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(11,11,12,.88) 0%, rgba(11,11,12,.6) 45%, rgba(11,11,12,.05) 100%); }
+@media (max-width: 760px) { .utah::after { background: rgba(11,11,12,.72); } }
+.utah .wrap { position: relative; z-index: 1; padding-block: clamp(120px, 14vw, 200px); }
+.utah-copy { max-width: 620px; display: grid; gap: 24px; justify-items: start; }
+.utah-copy p { color: rgba(245,245,243,.8); font-size: var(--t-lead); line-height: 1.5; }
+.facts { margin: 12px 0 0; display: grid; width: 100%; border-top: 1px solid rgba(245,245,243,.25); }
+.facts div { display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 16px; padding-block: 14px; border-bottom: 1px solid rgba(245,245,243,.25); }
+.facts dt { font: 500 12px/1.9 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--mute-dark); }
+.facts dd { margin: 0; }
+
+/* Why + lease structures */
+.why { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--ink); }
+.why li { padding: 32px 32px 0 0; display: grid; gap: 14px; align-content: start; }
+.why li + li { padding-left: 32px; border-left: 1px solid var(--rule); }
+.why p { color: var(--mute); }
+@media (max-width: 860px) {
+  .why { grid-template-columns: 1fr; }
+  .why li, .why li + li { padding: 28px 0; border-left: 0; border-top: 1px solid var(--rule); }
+  .why li:first-child { border-top: 0; }
+}
+/* FAQ */
+.faq-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 32px clamp(24px, 4vw, 64px); }
+.faq-grid .side { grid-column: span 4; display: grid; gap: 24px; align-content: start; justify-items: start; }
+.faq-grid .main { grid-column: span 8; border-top: 1px solid var(--ink); }
+@media (max-width: 900px) { .faq-grid .side, .faq-grid .main { grid-column: 1 / -1; } }
+.faq details { border-bottom: 1px solid var(--rule); }
+.faq summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; padding-block: 26px; font-size: clamp(1.125rem, 1.05rem + 0.4vw, 1.375rem); font-weight: 500; letter-spacing: -0.02em; line-height: 1.3; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary svg { flex-shrink: 0; width: 16px; height: 16px; margin-top: 6px; transition: transform .25s var(--ease); }
+.faq details[open] summary svg { transform: rotate(45deg); }
+.faq details p { padding-bottom: 28px; max-width: 62ch; color: var(--mute); }
+
+/* Portals */
+.portals { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(16px, 2vw, 24px); }
+.portal { height: 100%; display: grid; gap: 20px; align-content: start; padding: clamp(28px, 3vw, 40px); background: var(--char); border: 1px solid var(--rule-dark); }
+.portal h3 { font-size: clamp(1.5rem, 1.2rem + 0.9vw, 2rem); letter-spacing: -0.03em; }
+.checks { list-style: none; margin: 0; padding: 0; display: grid; border-top: 1px solid var(--rule-dark); }
+.checks li { padding-block: 12px; border-bottom: 1px solid var(--rule-dark); color: var(--mute-dark); font-size: 16px; }
+.portal .btn { justify-self: start; margin-top: 8px; }
+.portal .note { font: 400 12px/1.5 var(--f-mono); letter-spacing: .04em; color: var(--mute-dark); }
+@media (max-width: 760px) { .portals { grid-template-columns: 1fr; } }
+
+/* Contact */
+.contact-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 40px clamp(24px, 4vw, 64px); }
+.contact-grid .side { grid-column: span 5; display: grid; gap: 28px; align-content: start; justify-items: start; }
+.contact-grid .main { grid-column: span 7; min-width: 0; }
+@media (max-width: 900px) { .contact-grid .side, .contact-grid .main { grid-column: 1 / -1; } }
+.contact-photo { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: center 40%; }
+.contact-list { margin: 8px 0 0; display: grid; width: 100%; border-top: 1px solid var(--ink); }
+.contact-list div { display: grid; grid-template-columns: 90px minmax(0, 1fr); gap: 16px; padding-block: 18px; border-bottom: 1px solid var(--rule); }
+.contact-list dt { font: 500 12px/1.9 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--mute); }
+.contact-list dd { margin: 0; font-size: 19px; font-weight: 500; letter-spacing: -0.015em; overflow-wrap: anywhere; }
+.contact-list a { text-decoration: none; }
+.contact-list a:hover { opacity: .6; }
+form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; padding: clamp(24px, 3.5vw, 44px); background: var(--card); border: 1px solid var(--rule); }
+.form-head { grid-column: 1 / -1; display: grid; gap: 6px; padding-bottom: 8px; }
+.form-head h3 { font-size: clamp(1.375rem, 1.2rem + 0.6vw, 1.75rem); letter-spacing: -0.03em; }
+.form-head p { color: var(--mute); font-size: 15px; }
+.field { display: grid; gap: 8px; align-content: start; }
+.field.full { grid-column: 1 / -1; }
+label { font: 500 14px/1.3 var(--f-sans); letter-spacing: -0.005em; color: var(--ink); }
+label .opt { color: var(--mute); font-weight: 400; }
+input, select, textarea { width: 100%; min-height: 52px; font: 400 16px/1.4 var(--f-sans); color: var(--ink); background: var(--white); border: 1px solid var(--rule); border-radius: 0; padding: 14px 16px; appearance: none; -webkit-appearance: none; transition: border-color .2s var(--ease), background-color .2s var(--ease), box-shadow .2s var(--ease); }
+input:hover, select:hover, textarea:hover { border-color: #b9b9b4; }
+input:focus, select:focus, textarea:focus { outline: none; background: var(--card); border-color: var(--ink); box-shadow: 0 0 0 1px var(--ink); }
+select { cursor: pointer; padding-right: 44px; background-image: linear-gradient(45deg, transparent 50%, var(--ink) 50%), linear-gradient(135deg, var(--ink) 50%, transparent 50%); background-position: calc(100% - 22px) 50%, calc(100% - 17px) 50%; background-size: 5px 5px; background-repeat: no-repeat; }
+textarea { min-height: 150px; resize: vertical; }
+::placeholder { color: #75787c; }
+.form-foot { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 24px; padding-top: 8px; }
+.form-note { font: 400 12px/1.5 var(--f-mono); letter-spacing: .04em; color: var(--mute); }
+.form-status { grid-column: 1 / -1; font-size: 15px; color: var(--mute); }
+.form-status:empty { display: none; }
+.form-status.ok { color: var(--ink); font-weight: 500; }
+@media (max-width: 560px) { form { grid-template-columns: 1fr; } .form-foot .btn { width: 100%; } }
+
+/* Footer */
+footer { background: var(--black); color: var(--mute-dark); font-size: 15px; }
+.footer-top { display: grid; grid-template-columns: minmax(0, 2fr) repeat(3, minmax(0, 1fr)); gap: 40px; padding-block: clamp(72px, 8vw, 112px) 56px; }
+.footer-top h4 { margin: 0 0 18px; font: 500 12px/1.2 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--white); }
+.footer-top ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.footer-top a { text-decoration: none; }
+.footer-top a:hover { color: var(--white); }
+.footer-brand { display: grid; gap: 22px; align-content: start; }
+.footer-brand img { height: 30px; width: auto; }
+.footer-brand p { max-width: 34ch; }
+.footer-base { border-top: 1px solid var(--rule-dark); padding-block: 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font: 400 12px/1.4 var(--f-mono); letter-spacing: .06em; text-transform: uppercase; color: #8a8d91; }
+@media (max-width: 860px) { .footer-top { grid-template-columns: repeat(2, minmax(0, 1fr)); } .footer-brand { grid-column: 1 / -1; } }
+
+/* Gentle rise on scroll. Content is always visible; only position eases in. */
+.js [data-reveal] { transform: translateY(16px); transition: transform .8s var(--ease); }
+.js [data-reveal].in { transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+  .js [data-reveal] { transform: none; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header" id="site-header">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="SaltCanyon home"><img src="img/logo-bw-white.png" alt="SaltCanyon" width="147" height="26"></a>
+    <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="nav" id="site-nav" aria-label="Primary">
+      <a href="#investments">Investments</a>
+      <a href="#management">Property Management</a>
+      <a href="#brokerage">Brokerage</a>
+      <a href="#properties">Properties</a>
+      <a href="#portals">Client Login</a>
+      <a class="btn btn-white" href="#contact">Contact us</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero dark" aria-labelledby="hero-title">
+  <div class="wrap hero-grid">
+    <p class="label">Based in Draper, Utah · Working statewide</p>
+    <h1 id="hero-title">Commercial<br>real estate.<br>Done locally.</h1>
+    <div class="hero-side">
+      <p class="lead">Whether you are investing, looking for space for your business, or need someone to run your building, you get one local team that handles it all and treats your property like our own.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-white" href="#contact">Talk to our team <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"/></svg></a>
+        <a class="btn btn-line" href="#divisions">Our services</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-image">
+    <img class="slide active" src="img/hero-74-building.jpg" data-caption="Draper, Utah • Commercial condo units" alt="Modern dark brick two-story commercial condo building in Draper, Utah" width="2000" height="1333" style="object-position: center 55%">
+    <img class="slide" src="img/invest-land-wasatch.jpg" data-caption="Draper, Utah • Industrial land" alt="Industrial land in Draper, Utah, with the snow-capped Wasatch Mountains behind" width="1784" height="1190" style="object-position: center 42%" loading="lazy">
+    <img class="slide" src="img/hero-hurricane-park.jpg" data-caption="Hurricane, Utah • Industrial condos for lease or sale" alt="Aerial view of the Northridge industrial condo park in Hurricane, Utah" width="2000" height="1070" style="object-position: center 40%" loading="lazy">
+    <div class="hero-meta"><div class="wrap">
+      <span id="slide-cap" aria-live="polite">Draper, Utah • Commercial condo units</span>
+      <div class="slide-nav" role="group" aria-label="Photo slideshow">
+        <span class="slide-count" id="slide-count">01 / 03</span>
+        <div class="slide-dots" id="slide-dots">
+          <button type="button" class="active" aria-label="Show photo 1"></button>
+          <button type="button" aria-label="Show photo 2"></button>
+          <button type="button" aria-label="Show photo 3"></button>
+        </div>
+      </div>
+    </div></div>
+  </div>
+</section>
+
+<!-- Divisions -->
+<section id="divisions" class="light" aria-labelledby="divisions-title">
+  <div class="wrap">
+    <div class="section-top" data-reveal>
+      <p class="label">Three divisions, one team</p>
+      <h2 id="divisions-title">Everything your property needs, in one place.</h2>
+      <p class="lead">Most owners juggle a broker, a manager, and a capital partner who rarely talk. At SaltCanyon, one team keeps every decision aligned.</p>
+    </div>
+    <ul class="divisions">
+      <li data-reveal>
+        <h3>Investments</h3>
+        <p class="div-sub">Put your capital to work.</p>
+        <p>Invest alongside us in value-add industrial and flex properties across Utah, or use our properties to complete a 1031 exchange.</p>
+        <a class="tlink" href="#investments">Explore investments <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"/></svg></a>
+      </li>
+      <li data-reveal>
+        <h3>Property Management</h3>
+        <p class="div-sub">Own the building, not the headaches.</p>
+        <p>We handle tenants, maintenance, rent collection, and reporting, so your property earns more and takes less of your time.</p>
+        <a class="tlink" href="#management">See how we manage <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"/></svg></a>
+      </li>
+      <li data-reveal>
+        <h3>Brokerage</h3>
+        <p class="div-sub">The right space. The right buyer.</p>
+        <p>Leasing space for your business, buying an investment, or selling a building, we negotiate terms that put you ahead.</p>
+        <a class="tlink" href="#brokerage">Work with our brokers <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"/></svg></a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- Investments -->
+<section id="investments" class="dark" aria-labelledby="invest-title">
+  <div class="wrap">
+    <div class="section-top" data-reveal>
+      <p class="div-tag">Investments</p>
+      <h2 id="invest-title">We find the upside. You share in it.</h2>
+      <p class="lead">SaltCanyon Investments buys, improves, and manages value-add industrial and flex properties across Utah. You invest alongside a team that underwrites, builds, and operates its own deals, with clear reporting at every step.</p>
+    </div>
+    <div class="invest-media" data-reveal>
+      <img src="img/invest-bluffdale-condos.jpg" alt="Aerial view of a two-story industrial condo building in Bluffdale, Utah, with mountains behind" loading="lazy">
+      <span class="media-cap">Bluffdale, Utah • 6,000 sq. ft. industrial condo units</span>
+    </div>
+    <div class="callout" data-reveal>
+      <div>
+        <h3>Completing a 1031 exchange?</h3>
+        <p>Selling a property and want to defer capital gains? We help you find and close on replacement property within your 45-day identification and 180-day closing deadlines, including industrial condo units we own and sell. We work alongside your CPA and qualified intermediary to keep the exchange on track.</p>
+        <p class="fine">SaltCanyon does not provide tax or legal advice. Talk with your tax advisor about your situation.</p>
+      </div>
+      <a class="btn btn-white" href="#contact" data-topic="A 1031 exchange">Plan my 1031 exchange <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"/></svg></a>
+    </div>
+    <ol class="steps" aria-label="How we invest">
+      <li data-reveal><span class="n">01</span><h3>Source</h3><p>We find underpriced industrial, flex, and condo assets, and land in Utah's growth corridors.</p></li>
+      <li data-reveal><span class="n">02</span><h3>Acquire</h3><p>We underwrite against real comps and structure the capital before anyone commits.</p></li>
+      <li data-reveal><span class="n">03</span><h3>Improve</h3><p>Targeted upgrades or ground-up construction add value you can measure.</p></li>
+      <li data-reveal><span class="n">04</span><h3>Lease and manage</h3><p>Our own team leases and runs the property, so nothing gets lost between partners.</p></li>
+      <li data-reveal><span class="n">05</span><h3>Hold or exit</h3><p>You earn cash flow while we hold, and share in the gain when we sell buildings or units.</p></li>
+    </ol>
+    <div class="invest-cta"><a class="btn btn-white" href="#contact" data-topic="Investing with SaltCanyon">Ask about current investments <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"/></svg></a></div>
+  </div>
+</section>
+
+<!-- Property Management -->
+<section id="management" class="grey" aria-labelledby="management-title">
+  <div class="wrap chapter">
+    <div class="chapter-media" data-reveal>
+      <img src="img/brokerage-flex-aerial.jpg" alt="Aerial view of two single-story flex industrial buildings in Murray, Utah, with the Wasatch Mountains behind" loading="lazy" style="object-position: 50% center">
+      <span class="media-cap">Murray, Utah • 1,500 to 5,000 sq. ft. units</span>
+    </div>
+    <div class="chapter-body">
+      <p class="div-tag">Property Management</p>
+      <h2 id="management-title">Your property, managed like we own it.</h2>
+      <p class="lead">Owners get higher occupancy, fewer surprises, and clear numbers every month. Tenants get fast answers and a real person to call.</p>
+      <ul class="points">
+        <li data-reveal><h3>Fewer vacancies</h3><p>We keep good tenants happy and renewing, and fill empty units quickly at market rates.</p></li>
+        <li data-reveal><h3>Leases that protect you</h3><p>We draft, renew, and enforce your leases and track every escalation, so nothing slips.</p></li>
+        <li data-reveal><h3>Maintenance handled</h3><p>Routine and emergency repairs, vendors, HVAC, and landscaping, handled fast and at fair prices.</p></li>
+        <li data-reveal><h3>Reporting you can read</h3><p>Rent collection, CAM reconciliations, and monthly owner statements that show exactly how your property is doing.</p></li>
+      </ul>
+      <a class="btn btn-dark chapter-cta" href="#contact" data-topic="Property management">Get a management proposal for my property <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- Brokerage -->
+<section id="brokerage" class="light" aria-labelledby="brokerage-title">
+  <div class="wrap chapter flip">
+    <div class="chapter-body">
+      <p class="div-tag">Brokerage</p>
+      <h2 id="brokerage-title">Lease, buy, or sell with someone in your corner.</h2>
+      <p class="lead">Need space for your business, want to buy an investment property, or ready to sell? We use current comps and local relationships to get you better terms.</p>
+      <ul class="points">
+        <li data-reveal><h3>For tenants</h3><p>We find space that fits your operations and budget, then negotiate rent, improvements, and terms in your favor.</p></li>
+        <li data-reveal><h3>For buyers</h3><p>We bring you industrial and flex properties that match your goals and help you buy at the right price.</p></li>
+        <li data-reveal><h3>For sellers</h3><p>We price your property with real comps, put it in front of qualified buyers, and manage the deal to closing.</p></li>
+        <li data-reveal><h3>For owners</h3><p>We review your portfolio and show you where new leases or repositioning can raise your cash flow.</p></li>
+      </ul>
+      <a class="btn btn-dark chapter-cta" href="#contact" data-topic="Leasing space">Start my space search or property sale <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"/></svg></a>
+    </div>
+    <div class="chapter-media" data-reveal>
+      <img src="img/type-flex-aerial.jpg" alt="Aerial view of a long two-story flex industrial building in Logan, Utah, with mountains behind" loading="lazy" style="object-position: 30% center">
+      <span class="media-cap">Logan, Utah • 70,000+ sq. ft.</span>
+    </div>
+  </div>
+</section>
+
+<!-- Property types -->
+<section id="properties" class="grey" aria-labelledby="types-title">
+  <div class="wrap">
+    <div class="section-top" data-reveal>
+      <p class="label">What we work with</p>
+      <h2 id="types-title">Property types.</h2>
+      <p class="lead">Whatever your business or investment strategy needs, we know how to find it, lease it, and run it.</p>
+    </div>
+    <ul class="types">
+      <li data-reveal><article class="type" tabindex="0">
+        <div class="img-wrap"><img src="img/pm-brick-flex.jpg" alt="Draper Cove: red brick two-story flex buildings with storefronts" loading="lazy" style="object-position: 60% center"><p class="type-desc">Office plus warehouse or showroom under one roof. A strong fit for growing businesses that need both, and a property type that holds tenants well.</p></div>
+        <div class="type-body"><p class="label">Office / warehouse / showroom</p><h3>Flex industrial</h3><span class="hint">Hover for details</span></div>
+      </article></li>
+      <li data-reveal><article class="type" tabindex="0">
+        <div class="img-wrap"><img src="img/hero-hurricane-park.jpg" alt="Aerial view of the Northridge commercial condo park in Hurricane, Utah" loading="lazy"><p class="type-desc">Own your space instead of renting it. Build equity, control your costs, and sell when you are ready.</p></div>
+        <div class="type-body"><p class="label">Own your unit</p><h3>Commercial condos</h3><span class="hint">Hover for details</span></div>
+      </article></li>
+      <li data-reveal><article class="type" tabindex="0">
+        <div class="img-wrap"><img src="img/development-framing.jpg" alt="Commercial units under construction with wood framing and mountains behind" loading="lazy"><p class="type-desc">Space designed for today's tenants, built by our own team from raw land to finished units.</p></div>
+        <div class="type-body"><p class="label">Built by our team</p><h3>New development</h3><span class="hint">Hover for details</span></div>
+      </article></li>
+      <li data-reveal><article class="type" tabindex="0">
+        <div class="img-wrap"><img src="img/type-single-tenant-udk.jpg" alt="Front entrance of a two-story single-tenant office and warehouse building" loading="lazy" style="object-position: center 15%"><p class="type-desc">Stable, long-term income from established tenants on net leases. You collect rent with little to manage.</p></div>
+        <div class="type-body"><p class="label">Long-term income</p><h3>Single-tenant buildings</h3><span class="hint">Hover for details</span></div>
+      </article></li>
+    </ul>
+  </div>
+</section>
+
+<!-- Rooted in Utah -->
+<section class="utah" aria-labelledby="utah-title">
+  <img src="img/hero-74-building.jpg" alt="" loading="lazy">
+  <div class="wrap">
+    <div class="utah-copy" data-reveal>
+      <p class="label">Rooted in Utah</p>
+      <h2 id="utah-title">We know these streets.</h2>
+      <p>We built the Draper business park we work out of, and we invest in, lease, and manage buildings like it every day. Being in the thick of it means you get a team with a real read on zoning, tenant demand, and where Utah's next growth corridor is heading.</p>
+      <dl class="facts">
+        <div><dt>Office</dt><dd>74 E 13065 S, Unit 7, Draper, UT 84020</dd></div>
+        <div><dt>Market</dt><dd>Serving Utah’s industrial real estate market statewide</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- Why SaltCanyon -->
+<section class="light" aria-labelledby="why-title">
+  <div class="wrap">
+    <div class="section-top" data-reveal>
+      <p class="label">Why SaltCanyon</p>
+      <h2 id="why-title">We treat your investment like our own.</h2>
+    </div>
+    <ul class="why">
+      <li data-reveal><h3>One team, no hand-offs</h3><p>Your investment, management, and brokerage decisions come from the same people, so nothing gets lost between firms.</p></li>
+      <li data-reveal><h3>Better terms for you</h3><p>We track current comps across industrial and flex, so you lease, buy, and sell at the right number.</p></li>
+      <li data-reveal><h3>We see it coming</h3><p>Deep Utah roots mean we spot zoning changes, shifts in tenant demand, and new opportunities before they are obvious.</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="grey" aria-labelledby="faq-title">
+  <div class="wrap faq-grid">
+    <div class="side" data-reveal>
+      <p class="label">Questions</p>
+      <h2 id="faq-title">FAQ.</h2>
+      <a class="tlink" href="#contact">Ask us something else <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"/></svg></a>
+    </div>
+    <div class="main faq" data-reveal>
+      <details><summary>Can you help with a 1031 exchange?<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1v14M1 8h14" stroke="currentColor" stroke-width="1.5"/></svg></summary><p>Yes. We help you identify and close on replacement property within your 45-day and 180-day deadlines, including industrial condo units we own and sell. We work alongside your CPA and qualified intermediary. We do not provide tax or legal advice.</p></details>
+      <details><summary>Do you manage properties for other owners?<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1v14M1 8h14" stroke="currentColor" stroke-width="1.5"/></svg></summary><p>Yes. We manage everything from multi-tenant industrial parks to standalone commercial buildings, and we tailor the plan to your property and goals.</p></details>
+      <details><summary>What areas do you cover?<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1v14M1 8h14" stroke="currentColor" stroke-width="1.5"/></svg></summary><p>We are based in Draper and serve Utah's industrial real estate market statewide, from Logan to Hurricane.</p></details>
+      <details><summary>Can you help me find space for my business?<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1v14M1 8h14" stroke="currentColor" stroke-width="1.5"/></svg></summary><p>Yes. Tell us roughly how much space you need, where, and when. We will look at everything that fits, including properties we do not own or manage.</p></details>
+      <details><summary>I'm a tenant. How do I request maintenance?<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1v14M1 8h14" stroke="currentColor" stroke-width="1.5"/></svg></summary><p>Sign in to the tenant portal to submit a request. For emergencies, call (801) 210-0170.</p></details>
+      <details><summary>What is CAM?<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1v14M1 8h14" stroke="currentColor" stroke-width="1.5"/></svg></summary><p>Common area maintenance. It covers the shared costs of running a property, such as landscaping, snow removal, parking lot upkeep, and shared utilities. Under an NNN lease, each tenant pays a share based on the space they lease.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- Portals -->
+<section id="portals" class="dark" aria-labelledby="portals-title">
+  <div class="wrap">
+    <div class="section-top" data-reveal>
+      <p class="label">Client login</p>
+      <h2 id="portals-title">Tenant and investor portals.</h2>
+      <p class="lead">Current tenants and investors sign in to our AppFolio portal to handle everything online, any time.</p>
+    </div>
+    <ul class="portals">
+      <li data-reveal><div class="portal">
+        <h3>Tenants</h3>
+        <ul class="checks"><li>Pay rent online</li><li>Submit and track maintenance requests</li><li>View your lease and statements</li></ul>
+        <a class="btn btn-white" href="https://saltcanyon.appfolio.com/connect/users/sign_in?portfolio_uuid=" target="_blank" rel="noopener">Tenant login <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"/></svg></a>
+        <p class="note">Maintenance emergency? Call (801) 210-0170.</p>
+      </div></li>
+      <li data-reveal><div class="portal">
+        <h3>Investors and owners</h3>
+        <ul class="checks"><li>Review monthly owner statements</li><li>Track property performance</li><li>Access documents and reports</li></ul>
+        <a class="btn btn-white" href="https://saltcanyon.appfolio.com/connect/users/sign_in?portfolio_uuid=" target="_blank" rel="noopener">Investor login <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"/></svg></a>
+        <p class="note">Need access? Email management@saltcanyon.com.</p>
+      </div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="light" aria-labelledby="contact-title">
+  <div class="wrap contact-grid">
+    <div class="side" data-reveal>
+      <p class="label">Contact</p>
+      <h2 id="contact-title">Let's talk.</h2>
+      <p class="lead">Tell us what you are working on, whether that is investing, finding space, selling, or getting help running your property. We will get back to you quickly.</p>
+      <img class="contact-photo" src="img/contact-saltcanyon-entrance.jpg" alt="SaltCanyon sign above the entrance to our Draper office" loading="lazy">
+      <dl class="contact-list">
+        <div><dt>Phone</dt><dd><a href="tel:+18012100170">(801) 210-0170</a></dd></div>
+        <div><dt>Email</dt><dd><a href="mailto:management@saltcanyon.com">management@saltcanyon.com</a></dd></div>
+        <div><dt>Office</dt><dd>74 E 13065 S, Unit 7<br>Draper, UT 84020</dd></div>
+      </dl>
+    </div>
+    <div class="main" data-reveal>
+      <!-- Handled by Netlify Forms. Netlify detects this form at deploy time; submissions appear under Forms in the Netlify dashboard and are emailed to management@saltcanyon.com. -->
+      <form id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+        <input type="hidden" name="form-name" value="contact">
+        <p hidden><label for="f-bot">Leave this empty</label><input id="f-bot" name="bot-field" tabindex="-1" autocomplete="off"></p>
+        <div class="form-head"><h3>Send us a message</h3><p>Tell us what you are looking for and we will be in touch.</p></div>
+        <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></div>
+        <div class="field"><label for="f-company">Company <span class="opt">(optional)</span></label><input id="f-company" name="company" autocomplete="organization"></div>
+        <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+        <div class="field"><label for="f-phone">Phone <span class="opt">(optional)</span></label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
+        <div class="field full"><label for="f-topic">I'm interested in</label>
+          <select id="f-topic" name="topic">
+            <option>Investing with SaltCanyon</option>
+            <option>A 1031 exchange</option>
+            <option>Property management</option>
+            <option>Leasing space</option>
+            <option>Buying a property</option>
+            <option>Selling a property</option>
+            <option>Something else</option>
+          </select>
+        </div>
+        <div class="field full"><label for="f-message">Message</label><textarea id="f-message" name="message" placeholder="Size, location, timing, or anything else that helps." required></textarea></div>
+        <p class="form-status" id="form-status" role="status"></p>
+        <div class="form-foot">
+          <span class="form-note">Messages go to management@saltcanyon.com</span>
+          <button class="btn btn-dark" type="submit">Send message <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"/></svg></button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-top">
+    <div class="footer-brand">
+      <a href="#top" aria-label="SaltCanyon home"><img src="img/logo-bw-white.png" alt="SaltCanyon" width="169" height="30"></a>
+      <p>Commercial real estate across Utah. Investments, property management, and brokerage under one roof.</p>
+    </div>
+    <div><h4>Services</h4><ul><li><a href="#investments">Investments</a></li><li><a href="#management">Property Management</a></li><li><a href="#brokerage">Brokerage</a></li><li><a href="#properties">Property Types</a></li></ul></div>
+    <div><h4>Clients</h4><ul><li><a href="https://saltcanyon.appfolio.com/connect/users/sign_in?portfolio_uuid=" target="_blank" rel="noopener">Tenant Portal</a></li><li><a href="https://saltcanyon.appfolio.com/connect/users/sign_in?portfolio_uuid=" target="_blank" rel="noopener">Investor Portal</a></li><li><a href="#contact">Contact</a></li></ul></div>
+    <div><h4>Office</h4><ul><li>74 E 13065 S, Unit 7</li><li>Draper, UT 84020</li><li><a href="tel:+18012100170">(801) 210-0170</a></li><li><a href="mailto:management@saltcanyon.com">management@saltcanyon.com</a></li></ul></div>
+  </div>
+  <div class="wrap footer-base">
+    <span>© <span id="year">2026</span> SaltCanyon Real Estate</span>
+    <span>Draper, Utah</span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  document.documentElement.classList.add('js');
+
+  var header = document.getElementById('site-header');
+  var btn = document.getElementById('menu-btn');
+  var nav = document.getElementById('site-nav');
+  function syncHeader() { header.classList.toggle('scrolled', window.scrollY > 8 || nav.classList.contains('open')); }
+  window.addEventListener('scroll', syncHeader, { passive: true });
+  syncHeader();
+
+  function setMenu(open) {
+    nav.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', open);
+    btn.textContent = open ? 'Close' : 'Menu';
+    syncHeader();
+  }
+  btn.addEventListener('click', function () { setMenu(!nav.classList.contains('open')); });
+  nav.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && nav.classList.contains('open')) { setMenu(false); btn.focus(); }
+  });
+
+  // Gentle rise on scroll.
+  var items = document.querySelectorAll('[data-reveal]');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, { rootMargin: '0px 0px -8% 0px' });
+    items.forEach(function (el, i) { el.style.transitionDelay = (i % 4) * 70 + 'ms'; io.observe(el); });
+  } else {
+    items.forEach(function (el) { el.classList.add('in'); });
+  }
+
+  // Hero slideshow: crossfade every 6 seconds, pauses when the tab is hidden or motion is reduced.
+  var slides = document.querySelectorAll('.hero-image .slide');
+  var dots = document.querySelectorAll('#slide-dots button');
+  var count = document.getElementById('slide-count');
+  var cap = document.getElementById('slide-cap');
+  var current = 0, timer = null;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function show(n) {
+    current = (n + slides.length) % slides.length;
+    slides.forEach(function (s, i) { s.classList.toggle('active', i === current); });
+    dots.forEach(function (d, i) {
+      d.classList.remove('active', 'done');
+      void d.offsetWidth;
+      if (i < current) d.classList.add('done');
+      if (i === current) d.classList.add(reduce ? 'done' : 'active');
+    });
+    count.textContent = '0' + (current + 1) + ' / 0' + slides.length;
+    if (cap) cap.textContent = slides[current].getAttribute('data-caption') || '';
+  }
+  function start() { stop(); if (!reduce) timer = setInterval(function () { show(current + 1); }, 6000); }
+  function stop() { if (timer) clearInterval(timer); timer = null; }
+  dots.forEach(function (d, i) { d.addEventListener('click', function () { show(i); start(); }); });
+  document.addEventListener('visibilitychange', function () { document.hidden ? stop() : start(); });
+  show(0); start();
+
+  // Section buttons pre-select the matching topic in the contact form.
+  var topic = document.getElementById('f-topic');
+  document.querySelectorAll('[data-topic]').forEach(function (a) {
+    a.addEventListener('click', function () { topic.value = a.getAttribute('data-topic'); });
+  });
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Contact form (Netlify Forms)
+  var form = document.getElementById('contact-form');
+  var status = document.getElementById('form-status');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    status.className = 'form-status';
+    var missing = Array.prototype.filter.call(form.querySelectorAll('[required]'), function (el) { return !el.value.trim(); });
+    var email = form.querySelector('#f-email');
+    if (missing.length) { status.textContent = 'Please fill in your name, email, and a short message.'; missing[0].focus(); return; }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) { status.textContent = 'That email address looks incomplete. Please check it.'; email.focus(); return; }
+    var submit = form.querySelector('button[type="submit"]');
+    submit.disabled = true;
+    status.textContent = 'Sending…';
+    fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(new FormData(form)).toString() })
+      .then(function (r) {
+        if (!r.ok) throw new Error();
+        form.reset();
+        status.className = 'form-status ok';
+        status.textContent = 'Thanks. Your message was sent and we will be in touch soon.';
+      })
+      .catch(function () {
+        status.textContent = 'Your message did not go through. Please email management@saltcanyon.com or call (801) 210-0170.';
+      })
+      .then(function () { submit.disabled = false; });
+  });
+})();
+</script>
+</body>
+</html>
