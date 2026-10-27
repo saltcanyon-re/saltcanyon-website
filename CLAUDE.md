@@ -23,7 +23,7 @@ The public website for SaltCanyon, a Draper, Utah commercial real estate firm wi
 - Photos are full color. The only black-and-white effect is the hover on the property-type cards.
 - Logo: the black-and-white SaltCanyon logo (`img/logo-bw-white.png`). Browser-tab icon: black canyon mark on transparent (`img/favicon-*.png`).
 - Rejected before, do not bring back: tan, brown, or cream colors; serif fonts; orange striped bands; the colored division logos; photo captions under images; a "plain-language leasing" table.
-- Division order everywhere (menu, cards, sections, footer): **Investments, Property Management, Brokerage**.
+- Division order everywhere (menu, cards, sections, footer, contact topics): **Investments, Brokerage, Property Management**.
 - Copy speaks to the customer's benefit (investors, owners, tenants, buyers, sellers). Short, plain sentences. No invented statistics, testimonials, or client counts.
 - The 1031 exchange copy must keep the line that SaltCanyon does not provide tax or legal advice.
 

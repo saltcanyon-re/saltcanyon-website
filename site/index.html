@@ -205,7 +205,7 @@ section { padding-block: clamp(88px, 10vw, 160px); }
 .type { height: 100%; display: grid; grid-template-rows: auto 1fr; background: var(--card); }
 .type .img-wrap { position: relative; overflow: hidden; }
 .type img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; transition: transform .8s var(--ease), filter .5s var(--ease); }
-.type-desc { position: absolute; inset: 0; z-index: 1; display: flex; align-items: flex-end; margin: 0; padding: clamp(20px, 3vw, 36px); background: linear-gradient(0deg, rgba(11,11,12,.88) 0%, rgba(11,11,12,.55) 55%, rgba(11,11,12,.25) 100%); color: #fff; font-size: clamp(1.125rem, 1rem + 0.5vw, 1.375rem); font-weight: 500; line-height: 1.4; letter-spacing: -0.015em; opacity: 0; transform: translateY(10px); transition: opacity .35s var(--ease), transform .35s var(--ease); }
+.type-desc { position: absolute; inset: 0; z-index: 1; display: flex; align-items: center; margin: 0; padding: clamp(24px, 4vw, 48px); background: rgba(11,11,12,.62); color: #fff; font-size: clamp(1.125rem, 1rem + 0.5vw, 1.375rem); font-weight: 500; line-height: 1.4; letter-spacing: -0.015em; opacity: 0; transform: translateY(10px); transition: opacity .35s var(--ease), transform .35s var(--ease); }
 .type:hover img, .type:focus-within img { filter: grayscale(1) contrast(1.05); transform: scale(1.03); }
 .type:hover .type-desc, .type:focus-within .type-desc { opacity: 1; transform: none; }
 .type:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
@@ -327,8 +327,8 @@ footer { background: var(--black); color: var(--mute-dark); font-size: 15px; }
     <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="site-nav">Menu</button>
     <nav class="nav" id="site-nav" aria-label="Primary">
       <a href="#investments">Investments</a>
-      <a href="#management">Property Management</a>
       <a href="#brokerage">Brokerage</a>
+      <a href="#management">Property Management</a>
       <a href="#properties">Properties</a>
       <a href="#portals">Client Login</a>
       <a class="btn btn-white" href="#contact">Contact us</a>
@@ -384,18 +384,18 @@ footer { background: var(--black); color: var(--mute-dark); font-size: 15px; }
         <a class="tlink" href="#investments">Explore investments <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"/></svg></a>
       </li>
       <li data-reveal>
-        <h3>Property Management</h3>
-        <p class="div-sub">Own the building, not the headaches.</p>
-        <p>We handle tenants, maintenance, rent collection, and reporting, so your property earns more and takes less of your time.</p>
-        <a class="tlink" href="#management">See how we manage <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"/></svg></a>
-      </li>
-      <li data-reveal>
         <h3>Brokerage</h3>
         <p class="div-sub">The right space. The right buyer.</p>
         <p>Leasing space for your business, buying an investment, or selling a building, we negotiate terms that put you ahead.</p>
         <a class="tlink" href="#brokerage">Work with our brokers <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"/></svg></a>
       </li>
-    </ul>
+          <li data-reveal>
+        <h3>Property Management</h3>
+        <p class="div-sub">Own the building, not the headaches.</p>
+        <p>We handle tenants, maintenance, rent collection, and reporting, so your property earns more and takes less of your time.</p>
+        <a class="tlink" href="#management">See how we manage <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"/></svg></a>
+      </li>
+</ul>
   </div>
 </section>
 
@@ -430,30 +430,8 @@ footer { background: var(--black); color: var(--mute-dark); font-size: 15px; }
   </div>
 </section>
 
-<!-- Property Management -->
-<section id="management" class="grey" aria-labelledby="management-title">
-  <div class="wrap chapter">
-    <div class="chapter-media" data-reveal>
-      <img src="img/brokerage-flex-aerial.jpg" alt="Aerial view of two single-story flex industrial buildings in Murray, Utah, with the Wasatch Mountains behind" loading="lazy" style="object-position: 50% center">
-      <span class="media-cap">Murray, Utah • 1,500 to 5,000 sq. ft. units</span>
-    </div>
-    <div class="chapter-body">
-      <p class="div-tag">Property Management</p>
-      <h2 id="management-title">Your property, managed like we own it.</h2>
-      <p class="lead">Owners get higher occupancy, fewer surprises, and clear numbers every month. Tenants get fast answers and a real person to call.</p>
-      <ul class="points">
-        <li data-reveal><h3>Fewer vacancies</h3><p>We keep good tenants happy and renewing, and fill empty units quickly at market rates.</p></li>
-        <li data-reveal><h3>Leases that protect you</h3><p>We draft, renew, and enforce your leases and track every escalation, so nothing slips.</p></li>
-        <li data-reveal><h3>Maintenance handled</h3><p>Routine and emergency repairs, vendors, HVAC, and landscaping, handled fast and at fair prices.</p></li>
-        <li data-reveal><h3>Reporting you can read</h3><p>Rent collection, CAM reconciliations, and monthly owner statements that show exactly how your property is doing.</p></li>
-      </ul>
-      <a class="btn btn-dark chapter-cta" href="#contact" data-topic="Property management">Get a management proposal for my property <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"/></svg></a>
-    </div>
-  </div>
-</section>
-
 <!-- Brokerage -->
-<section id="brokerage" class="light" aria-labelledby="brokerage-title">
+<section id="brokerage" class="grey" aria-labelledby="brokerage-title">
   <div class="wrap chapter flip">
     <div class="chapter-body">
       <p class="div-tag">Brokerage</p>
@@ -470,6 +448,28 @@ footer { background: var(--black); color: var(--mute-dark); font-size: 15px; }
     <div class="chapter-media" data-reveal>
       <img src="img/type-flex-aerial.jpg" alt="Aerial view of a long two-story flex industrial building in Logan, Utah, with mountains behind" loading="lazy" style="object-position: 30% center">
       <span class="media-cap">Logan, Utah • 70,000+ sq. ft.</span>
+    </div>
+  </div>
+</section>
+
+<!-- Property Management -->
+<section id="management" class="light" aria-labelledby="management-title">
+  <div class="wrap chapter">
+    <div class="chapter-media" data-reveal>
+      <img src="img/brokerage-flex-aerial.jpg" alt="Aerial view of two single-story flex industrial buildings in Murray, Utah, with the Wasatch Mountains behind" loading="lazy" style="object-position: 50% center">
+      <span class="media-cap">Murray, Utah • 1,500 to 5,000 sq. ft. units</span>
+    </div>
+    <div class="chapter-body">
+      <p class="div-tag">Property Management</p>
+      <h2 id="management-title">Your property, managed like we own it.</h2>
+      <p class="lead">Owners get higher occupancy, fewer surprises, and clear numbers every month. Tenants get fast answers and a real person to call.</p>
+      <ul class="points">
+        <li data-reveal><h3>Fewer vacancies</h3><p>We keep good tenants happy and renewing, and fill empty units quickly at market rates.</p></li>
+        <li data-reveal><h3>Leases that protect you</h3><p>We draft, renew, and enforce your leases and track every escalation, so nothing slips.</p></li>
+        <li data-reveal><h3>Maintenance handled</h3><p>Routine and emergency repairs, vendors, HVAC, and landscaping, handled fast and at fair prices.</p></li>
+        <li data-reveal><h3>Reporting you can read</h3><p>Rent collection, CAM reconciliations, and monthly owner statements that show exactly how your property is doing.</p></li>
+      </ul>
+      <a class="btn btn-dark chapter-cta" href="#contact" data-topic="Property management">Get a management proposal for my property <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"/></svg></a>
     </div>
   </div>
 </section>
@@ -606,10 +606,10 @@ footer { background: var(--black); color: var(--mute-dark); font-size: 15px; }
           <select id="f-topic" name="topic">
             <option>Investing with SaltCanyon</option>
             <option>A 1031 exchange</option>
-            <option>Property management</option>
             <option>Leasing space</option>
             <option>Buying a property</option>
             <option>Selling a property</option>
+            <option>Property management</option>
             <option>Something else</option>
           </select>
         </div>
@@ -630,9 +630,9 @@ footer { background: var(--black); color: var(--mute-dark); font-size: 15px; }
   <div class="wrap footer-top">
     <div class="footer-brand">
       <a href="#top" aria-label="SaltCanyon home"><img src="img/logo-bw-white.png" alt="SaltCanyon" width="169" height="30"></a>
-      <p>Commercial real estate across Utah. Investments, property management, and brokerage under one roof.</p>
+      <p>Commercial real estate across Utah. Investments, brokerage, and property management under one roof.</p>
     </div>
-    <div><h4>Services</h4><ul><li><a href="#investments">Investments</a></li><li><a href="#management">Property Management</a></li><li><a href="#brokerage">Brokerage</a></li><li><a href="#properties">Property Types</a></li></ul></div>
+    <div><h4>Services</h4><ul><li><a href="#investments">Investments</a></li><li><a href="#brokerage">Brokerage</a></li><li><a href="#management">Property Management</a></li><li><a href="#properties">Property Types</a></li></ul></div>
     <div><h4>Clients</h4><ul><li><a href="https://saltcanyon.appfolio.com/connect/users/sign_in?portfolio_uuid=" target="_blank" rel="noopener">Tenant Portal</a></li><li><a href="https://saltcanyon.appfolio.com/connect/users/sign_in?portfolio_uuid=" target="_blank" rel="noopener">Investor Portal</a></li><li><a href="#contact">Contact</a></li></ul></div>
     <div><h4>Office</h4><ul><li>74 E 13065 S, Unit 7</li><li>Draper, UT 84020</li><li><a href="tel:+18012100170">(801) 210-0170</a></li><li><a href="mailto:management@saltcanyon.com">management@saltcanyon.com</a></li></ul></div>
   </div>
